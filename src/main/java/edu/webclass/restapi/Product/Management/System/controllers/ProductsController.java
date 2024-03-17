@@ -21,7 +21,7 @@ public class ProductsController {
         return productService.findAllProducts().stream().map(product -> new ProductDto(product)).toList();
     }
 
-    @GetMapping("/get/{id}")
+    @GetMapping("/{id}")
     public ProductDto findProductById(@PathVariable("id") String id) {
         return new ProductDto(productService.findProductById(id));
     }
